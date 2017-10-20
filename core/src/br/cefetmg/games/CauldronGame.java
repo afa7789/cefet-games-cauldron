@@ -111,6 +111,12 @@ public class CauldronGame extends ApplicationAdapter {
         sistemaParticulas.add(fogo);
 
         // instancia, configura e dá início ao efeito das bolhas
+        bolhas = ((ParticleEffect) assets.get("bolhas.pfx")).copy();
+        bolhas.init();
+        bolhas.start();
+        bolhas.translate(new Vector3(0,0.9f,0));
+        sistemaParticulas.add(bolhas);
+        
         // use o campo ParticleEffect bolhas definido na linha #38
         // ...
         // ...
